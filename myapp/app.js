@@ -36,7 +36,7 @@ app.get("/test", async (req, res) => {
 
     const collection = db.collection("Priority");
     const results = await collection.find({}).toArray();
-    res.json(results);
+    res.json(results[0]);
   } catch (error) {
     console.error("Error fetching data from MongoDB:", error);
     res.status(500).json({ error: "Internal Server Error" });
