@@ -92,3 +92,160 @@ app.post("/updatePriority", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
+
+//soc1
+app.post("/updatePriority/1", async (req, res) => {
+  try {
+    if (!client) {
+      await connectToDatabase();
+    }
+
+    const collection = db.collection("Priority");
+    const updatedPriorityData = {
+      soc1: req.body.soc,
+    }; 
+
+    // Update the existing priority based on the provided identifier
+    const result = await collection.updateOne({ _id: new BSON.ObjectId("65cfb9b73467bcd54b165ec5") }, { $set: updatedPriorityData });
+    
+    if (result.matchedCount > 0) {
+      res.json({ message: "Priority updated successfully", modifiedCount: result.modifiedCount });
+    } else {
+      res.status(404).json({ error: "Priority not found" });
+    }
+  } catch (error) {
+    console.error("Error updating priority in MongoDB:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+//soc2
+app.post("/updatePriority/2", async (req, res) => {
+  try {
+    if (!client) {
+      await connectToDatabase();
+    }
+
+    const collection = db.collection("Priority");
+    const updatedPriorityData = {
+      soc2: req.body.soc,
+    }; 
+
+    // Update the existing priority based on the provided identifier
+    const result = await collection.updateOne({ _id: new BSON.ObjectId("65cfb9b73467bcd54b165ec5") }, { $set: updatedPriorityData });
+    
+    if (result.matchedCount > 0) {
+      res.json({ message: "Priority updated successfully", modifiedCount: result.modifiedCount });
+    } else {
+      res.status(404).json({ error: "Priority not found" });
+    }
+  } catch (error) {
+    console.error("Error updating priority in MongoDB:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+//soc3
+app.post("/updatePriority/3", async (req, res) => {
+  try {
+    if (!client) {
+      await connectToDatabase();
+    }
+
+    const collection = db.collection("Priority");
+    const updatedPriorityData = {
+      soc3: req.body.soc,
+    }; 
+
+    // Update the existing priority based on the provided identifier
+    const result = await collection.updateOne({ _id: new BSON.ObjectId("65cfb9b73467bcd54b165ec5") }, { $set: updatedPriorityData });
+    
+    if (result.matchedCount > 0) {
+      res.json({ message: "Priority updated successfully", modifiedCount: result.modifiedCount });
+    } else {
+      res.status(404).json({ error: "Priority not found" });
+    }
+  } catch (error) {
+    console.error("Error updating priority in MongoDB:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+//soc4
+app.post("/updatePriority/4", async (req, res) => {
+  try {
+    if (!client) {
+      await connectToDatabase();
+    }
+
+    const collection = db.collection("Priority");
+    const updatedPriorityData = {
+      soc4: req.body.soc,
+    }; 
+
+    // Update the existing priority based on the provided identifier
+    const result = await collection.updateOne({ _id: new BSON.ObjectId("65cfb9b73467bcd54b165ec5") }, { $set: updatedPriorityData });
+    
+    if (result.matchedCount > 0) {
+      res.json({ message: "Priority updated successfully", modifiedCount: result.modifiedCount });
+    } else {
+      res.status(404).json({ error: "Priority not found" });
+    }
+  } catch (error) {
+    console.error("Error updating priority in MongoDB:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+//soc5
+app.post("/updatePriority/5", async (req, res) => {
+  try {
+    if (!client) {
+      await connectToDatabase();
+    }
+
+    const collection = db.collection("Priority");
+    const updatedPriorityData = {
+      soc5: req.body.soc,
+    }; 
+
+    // Update the existing priority based on the provided identifier
+    const result = await collection.updateOne({ _id: new BSON.ObjectId("65cfb9b73467bcd54b165ec5") }, { $set: updatedPriorityData });
+    
+    if (result.matchedCount > 0) {
+      res.json({ message: "Priority updated successfully", modifiedCount: result.modifiedCount });
+    } else {
+      res.status(404).json({ error: "Priority not found" });
+    }
+  } catch (error) {
+    console.error("Error updating priority in MongoDB:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+
+//soc6
+app.post("/updatePriority/6", async (req, res) => {
+  try {
+    if (!client) {
+      await connectToDatabase();
+    }
+
+    const collection = db.collection("Priority");
+    const updatedPriorityData = {
+      soc6: req.body.soc,
+    }; 
+
+    // Update the existing priority based on the provided identifier
+    const result = await collection.updateOne({ _id: new BSON.ObjectId("65cfb9b73467bcd54b165ec5") }, { $set: updatedPriorityData });
+    
+    if (result.matchedCount > 0) {
+      res.json({ message: "Priority updated successfully", modifiedCount: result.modifiedCount });
+    } else {
+      res.status(404).json({ error: "Priority not found" });
+    }
+  } catch (error) {
+    console.error("Error updating priority in MongoDB:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
