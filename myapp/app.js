@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 const { MongoClient, BSON } = require('mongodb');
 const app = express();
 app.use(express.json())
@@ -6,6 +7,9 @@ app.use(express.urlencoded({extended: true}))
 const port = 7777;
 const uri = "mongodb+srv://aupisit33:645Q1Q7wSLmoeQC3@cluster0.y9x1ckt.mongodb.net/?retryWrites=true&w=majority";
 
+app.use(cors({
+  origin: '*'
+}));
 
 
 let client, db;
